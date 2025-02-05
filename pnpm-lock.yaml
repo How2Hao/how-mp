@@ -144,6 +144,9 @@ importers:
       unocss:
         specifier: 0.64.1
         version: 0.64.1(postcss@8.5.1)(rollup@4.34.2)(vite@5.2.8(@types/node@22.13.1)(sass@1.64.2)(terser@5.37.0))(vue@3.4.21(typescript@5.7.3))
+      unplugin-auto-import:
+        specifier: ^19.0.0
+        version: 19.0.0(@vueuse/core@9.13.0(vue@3.4.21(typescript@5.7.3)))(rollup@4.34.2)
       vite:
         specifier: 5.2.8
         version: 5.2.8(@types/node@22.13.1)(sass@1.64.2)(terser@5.37.0)
@@ -4845,9 +4848,25 @@ packages:
       '@vueuse/core':
         optional: true
 
+  unplugin-auto-import@19.0.0:
+    resolution: {integrity: sha512-TREXtXqCM6YLy3rE2tjvKZEaCiPlP2e5bmnRKaS8AM2MlNgjV7UP4RPieWIfs4Isv0GoeHmov956PIIvJYdqpQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@nuxt/kit': ^3.2.2
+      '@vueuse/core': '*'
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+      '@vueuse/core':
+        optional: true
+
   unplugin@1.16.1:
     resolution: {integrity: sha512-4/u/j4FrCKdi17jaxuJA0jClGxB1AvU2hw/IuayPc4ay1XGaJs/rbb4v5WKwAjNifjmXK9PIFyuPiaK8azyR9w==}
     engines: {node: '>=14.0.0'}
+
+  unplugin@2.1.2:
+    resolution: {integrity: sha512-Q3LU0e4zxKfRko1wMV2HmP8lB9KWislY7hxXpxd+lGx0PRInE4vhMBVEZwpdVYHvtqzhSrzuIfErsob6bQfCzw==}
+    engines: {node: '>=18.12.0'}
 
   unquote@1.1.1:
     resolution: {integrity: sha512-vRCqFv6UhXpWxZPyGDh/F3ZpNv8/qo7w6iufLpQg9aKnQ71qM4B5KiI7Mia9COcjEhrO9LueHpMYjYzsWH3OIg==}
@@ -11248,7 +11267,26 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
+  unplugin-auto-import@19.0.0(@vueuse/core@9.13.0(vue@3.4.21(typescript@5.7.3)))(rollup@4.34.2):
+    dependencies:
+      '@antfu/utils': 0.7.10
+      '@rollup/pluginutils': 5.1.4(rollup@4.34.2)
+      local-pkg: 0.5.1
+      magic-string: 0.30.17
+      picomatch: 4.0.2
+      unimport: 3.14.6(rollup@4.34.2)
+      unplugin: 2.1.2
+    optionalDependencies:
+      '@vueuse/core': 9.13.0(vue@3.4.21(typescript@5.7.3))
+    transitivePeerDependencies:
+      - rollup
+
   unplugin@1.16.1:
+    dependencies:
+      acorn: 8.14.0
+      webpack-virtual-modules: 0.6.2
+
+  unplugin@2.1.2:
     dependencies:
       acorn: 8.14.0
       webpack-virtual-modules: 0.6.2
